@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SectionTitle } from "./SectionTitle";
 
@@ -55,6 +58,12 @@ const faqs = [
 ];
 
 export function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  function toggle(index: number) {
+    setOpenIndex(openIndex === index ? null : index);
+  }
+
   return (
     <section id="faq" className="section-spacing bg-zinc-50">
       <div className="container">
@@ -65,21 +74,31 @@ export function FAQ() {
         />
 
         <div className="mx-auto mt-12 max-w-4xl space-y-3">
-          {faqs.map((faq) => (
-            <details
-              key={faq.question}
-              className="group rounded-2xl border border-black/10 bg-white p-5 shadow-sm"
-            >
-              <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl text-left text-base font-black text-brand-dark">
-                <span>{faq.question}</span>
-                <ChevronDown
-                  className="h-5 w-5 shrink-0 text-brand-red transition group-open:rotate-180"
-                  aria-hidden="true"
-                />
-              </summary>
-              <p className="mt-4 text-sm leading-7 text-zinc-600">{faq.answer}</p>
-            </details>
-          ))}
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div
+                key={faq.question}
+                className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm"
+              >
+                <button
+                  type="button"
+                  onClick={() => toggle(index)}
+                  aria-expanded={isOpen}
+                  className="focus-ring flex w-full cursor-pointer items-center justify-between gap-4 rounded-xl text-left text-base font-black text-brand-dark"
+                >
+                  <span>{faq.question}</span>
+                  <ChevronDown
+                    className={`h-5 w-5 shrink-0 text-brand-red transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                    aria-hidden="true"
+                  />
+                </button>
+                {isOpen && (
+                  <p className="mt-4 text-sm leading-7 text-zinc-600">{faq.answer}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
