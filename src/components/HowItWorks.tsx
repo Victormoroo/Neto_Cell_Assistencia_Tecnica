@@ -7,7 +7,7 @@ const steps = [
   {
     icon: MessageCircle,
     title: "Você chama no WhatsApp",
-    text: "Conte o modelo do aparelho e o problema que está acontecendo."
+    text: "Nos indique o modelo do aparelho e o problema que está acontecendo."
   },
   {
     icon: ClipboardList,

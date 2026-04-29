@@ -111,7 +111,7 @@ export function Hero() {
                   {[
                     ["Tela e touch", "avaliação de peça"],
                     ["Carga e bateria", "teste de consumo"],
-                    ["Sistema e dados", "orientação segura"]
+                    ["Desbloqueio de sistemas", "orientação segura"]
                   ].map(([title, text]) => (
                     <div
                       key={title}

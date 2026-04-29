@@ -10,9 +10,6 @@ const brands = [
   "LG",
   "Asus",
   "Realme",
-  "Positivo",
-  "Multilaser",
-  "Nokia",
   "Outras marcas"
 ];
 

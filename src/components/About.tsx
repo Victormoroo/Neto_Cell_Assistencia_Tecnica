@@ -19,8 +19,8 @@ export function About() {
           <div className="relative">
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                { icon: Store, label: "Loja em Franca-SP" },
-                { icon: Smartphone, label: "iPhone e várias marcas" },
+                { icon: Store, label: "Loja física em Franca-SP" },
+                { icon: Smartphone, label: "iPhone e Android" },
                 { icon: Wrench, label: "Diagnóstico técnico" },
                 { icon: CheckCircle2, label: "Serviços com garantia" }
               ].map((item) => (
@@ -38,7 +38,7 @@ export function About() {
                 Neto Cell Assistência Técnica
               </p>
               <p className="mt-2 text-2xl font-black leading-tight">
-                Atendimento técnico com linguagem simples para o cliente decidir com segurança.
+                Atendimento técnico e humanizado para o cliente decidir com segurança.
               </p>
             </div>
           </div>

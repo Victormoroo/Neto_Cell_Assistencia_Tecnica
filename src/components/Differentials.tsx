@@ -16,7 +16,7 @@ const differentials = [
   { icon: Truck, title: "Retirada, entrega e atendimento na loja" },
   { icon: ClipboardCheck, title: "Diagnóstico técnico" },
   { icon: ShieldCheck, title: "Garantia nos serviços" },
-  { icon: Wrench, title: "Peças e materiais conforme necessidade do cliente" },
+  { icon: Wrench, title: "Peças e materiais de qualidade" },
   { icon: Banknote, title: "Pagamento via Pix, débito e crédito" },
   { icon: PackageCheck, title: "Comunicação clara antes do reparo" }
 ];
