@@ -3,7 +3,7 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { navItems, WHATSAPP_URL } from "@/config/business";
+import { navItems } from "@/config/business";
 import { Logo } from "./Logo";
 
 export function Header() {
@@ -37,17 +37,6 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3 lg:flex">
-            <Link
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="focus-ring rounded-full bg-brand-red px-5 py-3 text-sm font-bold text-white shadow-red transition hover:-translate-y-0.5 hover:bg-red-700"
-            >
-              Chamar no WhatsApp
-            </Link>
-          </div>
-
           <button
             type="button"
             className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white text-brand-dark shadow-sm lg:hidden"
@@ -74,15 +63,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="focus-ring mt-2 rounded-full bg-brand-red px-5 py-3 text-center text-sm font-bold text-white shadow-red"
-              onClick={() => setOpen(false)}
-            >
-              Chamar no WhatsApp
-            </Link>
           </nav>
         ) : null}
       </div>
