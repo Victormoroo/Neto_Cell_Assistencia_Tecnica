@@ -2,7 +2,7 @@ export const BUSINESS_NAME = "Neto Cell Assistência Técnica";
 export const BRAND_SHORT_NAME = "Neto Cell";
 export const CITY_REGION = "Franca-SP e região";
 export const WHATSAPP_NUMBER = "5516992045572";
-export const WHATSAPP_DISPLAY = "+55 16 99204-5572";
+export const WHATSAPP_DISPLAY = "+55 16 99204-5572 / +55 16 99120-5660";
 export const WHATSAPP_MESSAGE =
   "Olá, vim pelo site da Neto Cell e gostaria de solicitar um orçamento para meu celular.";
 export const ADDRESS =
