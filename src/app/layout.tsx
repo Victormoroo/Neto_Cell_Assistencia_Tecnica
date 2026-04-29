@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     "conector de carga",
     "reparo de placa"
   ],
-  metadataBase: new URL("https://netocell.com.br"),
+  metadataBase: new URL("https://netocellassistencia.com.br"),
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: "Neto Cell Assistência Técnica | Conserto de Celular em Franca-SP",
+    title: "Neto Cell Assistência Técnica em Franca-SP",
     description:
       "Conserto de celular em Franca-SP e região com diagnóstico técnico, atendimento pelo WhatsApp e soluções para iPhone, Samsung, Motorola, Xiaomi e outras marcas.",
     locale: "pt_BR",
