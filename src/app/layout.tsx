@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Neto Cell Assistência Técnica | Conserto de Celular em Franca-SP",
+  title: "Neto Cell Assistência Técnica",
   description:
     "Assistência técnica de celulares em Franca-SP. Conserto de iPhone, Samsung, Motorola, Xiaomi, troca de tela, bateria, conector de carga, reparo de placa e orçamento pelo WhatsApp.",
   keywords: [
