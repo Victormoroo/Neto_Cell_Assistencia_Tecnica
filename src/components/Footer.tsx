@@ -7,7 +7,6 @@ import {
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
   WHATSAPP_DISPLAY,
-  WHATSAPP_URL,
   navItems
 } from "@/config/business";
 import { Logo } from "./Logo";
@@ -74,9 +73,7 @@ export function Footer() {
             Contato
           </h2>
           <div className="mt-5 grid gap-3 text-sm leading-6 text-white/70">
-            <Link className="focus-ring w-fit rounded-md hover:text-white" href={WHATSAPP_URL}>
-              {WHATSAPP_DISPLAY}
-            </Link>
+            <span>{WHATSAPP_DISPLAY}</span>
             <span>{ADDRESS}</span>
             <Link
               className="focus-ring w-fit rounded-md hover:text-white"
