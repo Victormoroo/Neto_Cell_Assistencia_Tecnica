@@ -57,19 +57,18 @@ export function About() {
             entender o problema, receber orientação clara e contar com uma solução
             adequada para o aparelho.
           </p>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-8 grid gap-x-6 gap-y-4 sm:grid-cols-2">
             {bullets.map((bullet) => (
-              <div key={bullet} className="flex items-start gap-3">
-                <CheckCircle2
-                  className="mt-0.5 h-5 w-5 shrink-0 text-brand-red"
-                  aria-hidden="true"
-                />
-                <span className="text-sm font-bold leading-6 text-zinc-800">
+              <li key={bullet} className="flex min-h-12 items-center gap-3">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-50 text-brand-red">
+                  <CheckCircle2 className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <span className="text-sm font-bold leading-5 text-zinc-800">
                   {bullet}
                 </span>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>
