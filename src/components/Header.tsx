@@ -10,59 +10,65 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/92 shadow-sm backdrop-blur-xl">
-      <div className="container flex h-20 items-center justify-between gap-4">
-        <Link
-          href="#inicio"
-          className="focus-ring rounded-xl"
-          aria-label="Ir para o início"
-          onClick={() => setOpen(false)}
-        >
-          <Logo />
-        </Link>
-
-        <nav className="hidden items-center gap-5 lg:flex" aria-label="Menu principal">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="focus-ring rounded-md text-sm font-semibold text-zinc-700 transition hover:text-brand-red"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden items-center gap-3 lg:flex">
+    <header className="fixed inset-x-0 top-4 z-50">
+      <div className="container relative">
+        <div className="flex min-h-16 items-center justify-between gap-4 rounded-full border border-black/10 bg-white/90 px-4 py-2 shadow-[0_18px_55px_rgba(0,0,0,0.14)] backdrop-blur-xl sm:px-5">
           <Link
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="focus-ring rounded-full bg-brand-red px-5 py-3 text-sm font-bold text-white shadow-red transition hover:-translate-y-0.5 hover:bg-red-700"
+            href="#inicio"
+            className="focus-ring rounded-full"
+            aria-label="Ir para o início"
+            onClick={() => setOpen(false)}
           >
-            Chamar no WhatsApp
+            <Logo />
           </Link>
-        </div>
 
-        <button
-          type="button"
-          className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white text-brand-dark lg:hidden"
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((current) => !current)}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </div>
-
-      {open ? (
-        <div className="border-t border-black/5 bg-white lg:hidden">
-          <nav className="container grid gap-1 py-4" aria-label="Menu mobile">
+          <nav
+            className="hidden items-center gap-1 rounded-full bg-zinc-100/80 p-1 lg:flex"
+            aria-label="Menu principal"
+          >
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="focus-ring rounded-xl px-3 py-3 text-base font-semibold text-zinc-800 hover:bg-zinc-100"
+                className="focus-ring rounded-full px-3 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-white hover:text-brand-red hover:shadow-sm"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden items-center gap-3 lg:flex">
+            <Link
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="focus-ring rounded-full bg-brand-red px-5 py-3 text-sm font-bold text-white shadow-red transition hover:-translate-y-0.5 hover:bg-red-700"
+            >
+              Chamar no WhatsApp
+            </Link>
+          </div>
+
+          <button
+            type="button"
+            className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white text-brand-dark shadow-sm lg:hidden"
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((current) => !current)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+
+        {open ? (
+          <nav
+            className="absolute inset-x-0 top-[calc(100%+0.75rem)] grid gap-1 rounded-3xl border border-black/10 bg-white/95 p-3 shadow-[0_18px_55px_rgba(0,0,0,0.14)] backdrop-blur-xl lg:hidden"
+            aria-label="Menu mobile"
+          >
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="focus-ring rounded-2xl px-4 py-3 text-base font-semibold text-zinc-800 hover:bg-zinc-100"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -78,8 +84,8 @@ export function Header() {
               Chamar no WhatsApp
             </Link>
           </nav>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
     </header>
   );
 }
