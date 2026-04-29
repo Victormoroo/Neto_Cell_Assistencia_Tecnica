@@ -10,8 +10,8 @@ export const ADDRESS =
 export const BUSINESS_HOURS = "09:00 às 18:00";
 export const INSTAGRAM_HANDLE = "@netocell1515";
 export const INSTAGRAM_URL = "https://www.instagram.com/netocell1515";
-export const GOOGLE_MAPS_URL = "https://share.google/hdx18zoJwXwzNU5kW";
-export const PAYMENT_METHODS = ["Pix", "débito", "crédito", "outras formas de pagamento"];
+export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/VmY6J4nf2vdHjwdA8";
+export const PAYMENT_METHODS = ["Pix", "débito e crédito"];
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE

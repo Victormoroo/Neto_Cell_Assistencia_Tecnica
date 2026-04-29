@@ -35,7 +35,7 @@ export function Footer() {
             {BUSINESS_NAME}. Conserto de celulares em {CITY_REGION}.
           </p>
           <p className="mt-4 text-sm font-bold text-white">
-            Assistência técnica especializada em celulares, iPhone e diversas marcas.
+            Assistência técnica especializada em celulares de diversas marcas.
           </p>
         </div>
 

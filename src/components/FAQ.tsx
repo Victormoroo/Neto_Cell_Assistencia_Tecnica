@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "Quais marcas vocês atendem?",
     answer:
-      "Atendemos iPhone, Samsung, Motorola, Xiaomi e diversas outras marcas. Consulte pelo WhatsApp informando o modelo do aparelho."
+      "Atendemos as Linhas Apple, Samsung, Motorola, Xiaomi e diversas outras marcas. Consulte pelo WhatsApp informando o modelo do aparelho."
   },
   {
     question: "O orçamento é feito pelo WhatsApp?",
@@ -31,14 +31,9 @@ const faqs = [
       "O prazo depende do modelo, do defeito e da disponibilidade da peça. Alguns serviços podem ser resolvidos com mais rapidez, enquanto outros exigem avaliação detalhada."
   },
   {
-    question: "Vocês buscam ou entregam o aparelho?",
-    answer:
-      "A Neto Cell oferece opções de atendimento na loja, retirada/coleta e entrega. Consulte a disponibilidade para sua região pelo WhatsApp."
-  },
-  {
     question: "Quais formas de pagamento são aceitas?",
     answer:
-      "Aceitamos Pix, cartão de débito, cartão de crédito e outras formas de pagamento disponíveis na loja."
+      "Aceitamos Pix, cartão de débito e cartão de crédito"
   },
   {
     question: "Vocês consertam celular molhado?",
@@ -50,11 +45,6 @@ const faqs = [
     answer:
       "Sim. A troca de tela e bateria está entre os serviços mais procurados. Consulte pelo WhatsApp informando o modelo do aparelho."
   },
-  {
-    question: "Preciso agendar atendimento?",
-    answer:
-      "O atendimento pode começar pelo WhatsApp. Dependendo do serviço, a equipe orienta se é necessário levar o aparelho ou combinar outra forma de atendimento."
-  }
 ];
 
 export function FAQ() {
