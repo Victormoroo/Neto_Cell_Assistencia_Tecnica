@@ -1,11 +1,12 @@
-import { CheckCircle2, ClipboardList, MessageCircle, PackageCheck } from "lucide-react";
+import { CheckCircle2, ClipboardList, PackageCheck } from "lucide-react";
 import { WHATSAPP_URL } from "@/config/business";
 import { CTAButton } from "./CTAButton";
 import { SectionTitle } from "./SectionTitle";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const steps = [
   {
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     title: "Você chama no WhatsApp",
     text: "Nos indique o modelo do aparelho e o problema que está acontecendo."
   },

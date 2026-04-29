@@ -2,8 +2,7 @@ import {
   AtSign,
   Clock3,
   CreditCard,
-  MapPinned,
-  MessageCircle
+  MapPinned
 } from "lucide-react";
 import {
   ADDRESS,
@@ -16,9 +15,10 @@ import {
 } from "@/config/business";
 import { CTAButton } from "./CTAButton";
 import { SectionTitle } from "./SectionTitle";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const contactItems = [
-  { icon: MessageCircle, title: "WhatsApp", text: WHATSAPP_DISPLAY },
+  { icon: WhatsAppIcon, title: "WhatsApp", text: WHATSAPP_DISPLAY },
   { icon: MapPinned, title: "Endereço", text: ADDRESS },
   { icon: Clock3, title: "Horário", text: BUSINESS_HOURS },
   { icon: AtSign, title: "Instagram", text: INSTAGRAM_HANDLE },

@@ -1,7 +1,8 @@
-import { Home, MapPin, MessageCircle, Truck } from "lucide-react";
+import { Home, MapPin, Truck } from "lucide-react";
 import { WHATSAPP_URL } from "@/config/business";
 import { CTAButton } from "./CTAButton";
 import { SectionTitle } from "./SectionTitle";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const options = [
   {
@@ -20,7 +21,7 @@ const options = [
     text: "Combine opções de entrega para facilitar o recebimento do aparelho."
   },
   {
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     title: "Orientação pelo WhatsApp",
     text: "Envie modelo, fotos quando útil e descreva o problema para iniciar o atendimento."
   }

@@ -5,17 +5,17 @@ import {
   Clock3,
   CreditCard,
   MapPin,
-  MessageCircle,
   ShieldCheck,
   Smartphone,
   Wrench
 } from "lucide-react";
 import { CITY_REGION, WHATSAPP_URL } from "@/config/business";
 import { CTAButton } from "./CTAButton";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const highlights = [
   { icon: MapPin, label: "Atendimento em Franca-SP e região" },
-  { icon: MessageCircle, label: "Orçamento rápido pelo WhatsApp" },
+  { icon: WhatsAppIcon, label: "Orçamento rápido pelo WhatsApp" },
   { icon: ShieldCheck, label: "Garantia nos serviços" },
   { icon: CreditCard, label: "Pix, débito e crédito" }
 ];

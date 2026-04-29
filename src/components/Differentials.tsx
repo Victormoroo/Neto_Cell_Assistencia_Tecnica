@@ -1,7 +1,6 @@
 import {
   Banknote,
   ClipboardCheck,
-  MessageCircle,
   PackageCheck,
   ShieldCheck,
   Store,
@@ -9,9 +8,10 @@ import {
   Wrench
 } from "lucide-react";
 import { SectionTitle } from "./SectionTitle";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const differentials = [
-  { icon: MessageCircle, title: "Atendimento rápido pelo WhatsApp" },
+  { icon: WhatsAppIcon, title: "Atendimento rápido pelo WhatsApp" },
   { icon: Store, title: "Loja em Franca-SP" },
   { icon: Truck, title: "Retirada, entrega e atendimento na loja" },
   { icon: ClipboardCheck, title: "Diagnóstico técnico" },
