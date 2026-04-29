@@ -1,6 +1,4 @@
-import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
-import { WHATSAPP_URL } from "@/config/business";
 
 type ServiceCardProps = {
   icon: LucideIcon;
@@ -16,15 +14,6 @@ export function ServiceCard({ icon: Icon, title, description }: ServiceCardProps
       </div>
       <h3 className="text-lg font-black text-brand-dark">{title}</h3>
       <p className="mt-3 flex-1 text-sm leading-6 text-zinc-600">{description}</p>
-      <Link
-        href={WHATSAPP_URL}
-        target="_blank"
-        rel="noreferrer"
-        className="focus-ring mt-5 inline-flex w-fit rounded-full text-sm font-black text-brand-red transition hover:text-red-700"
-        aria-label={`Pedir orçamento para ${title}`}
-      >
-        Pedir orçamento
-      </Link>
     </article>
   );
 }

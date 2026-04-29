@@ -6,14 +6,13 @@ import {
   Eraser,
   FileCheck2,
   HardDriveUpload,
-  Headphones,
   PlugZap,
   Shield,
   ShoppingBag,
-  Smartphone,
-  TabletSmartphone,
-  Wrench
+  Smartphone
 } from "lucide-react";
+import { WHATSAPP_URL } from "@/config/business";
+import { CTAButton } from "./CTAButton";
 import { ServiceCard } from "./ServiceCard";
 import { SectionTitle } from "./SectionTitle";
 
@@ -47,12 +46,6 @@ const services = [
     title: "Reparo em iPhone",
     description:
       "Atendimento para iPhone com avaliação de tela, bateria, conector, câmera, sistema e outros defeitos conforme diagnóstico."
-  },
-  {
-    icon: TabletSmartphone,
-    title: "Reparo em Samsung, Motorola e Xiaomi",
-    description:
-      "Soluções para modelos populares com orientação clara sobre peça, serviço e disponibilidade para cada aparelho."
   },
   {
     icon: Camera,
@@ -95,18 +88,6 @@ const services = [
     title: "Capinhas e acessórios",
     description:
       "Opções de proteção e acessórios para complementar o uso do celular conforme disponibilidade na loja."
-  },
-  {
-    icon: Wrench,
-    title: "Diagnóstico técnico",
-    description:
-      "Avaliação para entender o problema, explicar possibilidades e orientar o orçamento antes da execução do serviço."
-  },
-  {
-    icon: Headphones,
-    title: "Atendimento e orientação",
-    description:
-      "Suporte inicial pelo WhatsApp para entender modelo, defeito e melhor forma de atendimento em Franca-SP e região."
   }
 ];
 
@@ -124,6 +105,12 @@ export function Services() {
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <CTAButton href={WHATSAPP_URL} ariaLabel="Pedir orçamento pelo WhatsApp">
+            Pedir orçamento
+          </CTAButton>
         </div>
       </div>
     </section>
