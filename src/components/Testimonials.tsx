@@ -3,12 +3,30 @@ import { SectionTitle } from "./SectionTitle";
 
 // Depoimentos fictícios editáveis. Substitua por avaliações reais autorizadas quando houver.
 const testimonials = [
-  "Atendimento rápido e explicaram tudo antes de fazer o conserto.",
-  "Meu celular voltou a carregar normalmente. Gostei muito do serviço.",
-  "Levei meu iPhone para avaliação e fui muito bem atendido.",
-  "Serviço bem feito, com preço justo e entrega dentro do combinado.",
-  "Consegui resolver tudo pelo WhatsApp antes de ir até a loja.",
-  "Foram claros no orçamento e testaram o aparelho antes da entrega."
+  {
+    name: "Franciele Vaz Afonso",
+    text: "Super recomendo, ótimo atendimento, preço super em conta e ótimas qualidades."
+  },
+  {
+    name: "Marcos Damaceno",
+    text: "Ótimo atendimento,serviço de qualidade, parabéns."
+  },
+  {
+    name: "Marisa Aparecida Nogueira",
+    text: "Ótimo atendimento, tanto na assistência  técnica, qto à loja, diversidades de produtos e presentes, sou cliente e super indico!"
+  },
+  {
+    name: "Kathleen De Moraes",
+    text: "Serviço atencioso, rápido e honesto, com certeza indico!"
+  },
+  {
+    name: "Claudio Barbosa",
+    text: "Muito bom atendimento, consegui resolver meus problemas , procurei outras lojas e não resolveu fui no neto cell resolveu meu problema no msm dia super indicado."
+  },
+  {
+    name: "Cleiton Pereira",
+    text: "A melhor assistência de Franca e região."
+  }
 ];
 
 export function Testimonials() {
@@ -22,10 +40,10 @@ export function Testimonials() {
         />
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((text, index) => (
+          {testimonials.map((testimonial, index) => (
             <article
-              key={text}
-              className="rounded-2xl border border-black/10 bg-zinc-50 p-6"
+              key={`${testimonial.name}-${testimonial.text}`}
+              className="flex h-full flex-col rounded-2xl border border-black/10 bg-zinc-50 p-6"
             >
               <div className="mb-5 flex items-center justify-between">
                 <Quote className="h-7 w-7 text-brand-red" aria-hidden="true" />
@@ -39,11 +57,11 @@ export function Testimonials() {
                   ))}
                 </div>
               </div>
-              <p className="text-base font-semibold leading-7 text-zinc-800">
-                “{text}”
+              <p className="flex-1 text-base font-semibold leading-7 text-zinc-800">
+                “{testimonial.text}”
               </p>
-              <p className="mt-5 text-sm font-bold text-zinc-500">
-                Cliente Neto Cell
+              <p className="mt-6 border-t border-black/10 pt-4 text-sm font-bold text-zinc-500">
+                {testimonial.name}
               </p>
             </article>
           ))}
