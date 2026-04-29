@@ -3,15 +3,13 @@ import {
   Clock3,
   CreditCard,
   MapPinned,
-  MessageCircle,
-  Navigation
+  MessageCircle
 } from "lucide-react";
 import {
   ADDRESS,
   BUSINESS_HOURS,
   GOOGLE_MAPS_URL,
   INSTAGRAM_HANDLE,
-  INSTAGRAM_URL,
   PAYMENT_METHODS,
   WHATSAPP_DISPLAY,
   WHATSAPP_URL
@@ -26,6 +24,9 @@ const contactItems = [
   { icon: AtSign, title: "Instagram", text: INSTAGRAM_HANDLE },
   { icon: CreditCard, title: "Pagamento", text: PAYMENT_METHODS.join(", ") }
 ];
+
+const GOOGLE_MAPS_EMBED_URL =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.0651238981704!2d-47.45602412399843!3d-20.54451615773974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ba09bd563fc349%3A0x5f572c5f214462cb!2sNeto%20Cell%20Assist%C3%AAncia%20T%C3%A9cnica!5e0!3m2!1spt-BR!2sbr!4v1777482693693!5m2!1spt-BR!2sbr";
 
 export function Contact() {
   return (
@@ -63,36 +64,19 @@ export function Contact() {
               <CTAButton href={GOOGLE_MAPS_URL} variant="light">
                 Ver no Google Maps
               </CTAButton>
-              <CTAButton href={INSTAGRAM_URL} variant="light">
-                Abrir Instagram
-              </CTAButton>
             </div>
           </div>
 
-          <div className="min-h-[360px] overflow-hidden rounded-3xl border border-white/10 bg-white text-brand-dark shadow-2xl">
-            <div className="flex h-full min-h-[360px] flex-col justify-between bg-[linear-gradient(135deg,#f7f7f8_0%,#ffffff_48%,#fee2e2_100%)] p-8">
-              <div>
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-red text-white shadow-red">
-                  <Navigation className="h-7 w-7" aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl font-black">Mapa e localização</h3>
-                <p className="mt-3 max-w-xl text-base leading-7 text-zinc-600">
-                  Av. José Pimenta Sobrinho, 180 - Parque das Esmeraldas,
-                  Franca - SP. O layout já está preparado para receber um embed
-                  real do Google Maps quando desejado.
-                </p>
-              </div>
-              <div className="mt-8 rounded-2xl border border-black/10 bg-white p-4">
-                <p className="text-sm font-bold text-zinc-500">Abrir rota</p>
-                <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-base font-black text-brand-dark">
-                    Neto Cell Assistência Técnica
-                  </p>
-                  <CTAButton href={GOOGLE_MAPS_URL} variant="primary" className="sm:min-w-fit">
-                    Ver rota
-                  </CTAButton>
-                </div>
-              </div>
+          <div className="overflow-hidden rounded-3xl border border-white/10 bg-white text-brand-dark shadow-2xl">
+            <div className="flex h-full min-h-[360px] flex-col">
+              <iframe
+                src={GOOGLE_MAPS_EMBED_URL}
+                title="Mapa da Neto Cell Assistência Técnica"
+                className="min-h-[300px] w-full flex-1 border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
