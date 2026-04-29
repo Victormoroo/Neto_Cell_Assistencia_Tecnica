@@ -23,14 +23,14 @@ export function Header() {
           </Link>
 
           <nav
-            className="hidden items-center gap-1 rounded-full bg-zinc-100/80 p-1 lg:flex"
+            className="hidden items-center gap-1 lg:flex"
             aria-label="Menu principal"
           >
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="focus-ring rounded-full px-3 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-white hover:text-brand-red hover:shadow-sm"
+                className="focus-ring rounded-full px-3 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100/80 hover:text-brand-red"
               >
                 {item.label}
               </Link>
