@@ -12,10 +12,10 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-4 z-50">
       <div className="container relative">
-        <div className="flex min-h-16 items-center justify-between gap-4 rounded-full border border-black/10 bg-white/90 px-4 py-2 shadow-[0_18px_55px_rgba(0,0,0,0.14)] backdrop-blur-xl sm:px-5">
+        <div className="mx-auto flex min-h-16 w-full max-w-4xl items-center justify-between gap-4 rounded-full border border-black/10 bg-white/90 px-4 py-2 shadow-[0_18px_55px_rgba(0,0,0,0.14)] backdrop-blur-xl lg:justify-center lg:gap-5">
           <Link
             href="#inicio"
-            className="focus-ring rounded-full"
+            className="focus-ring shrink-0 rounded-full"
             aria-label="Ir para o início"
             onClick={() => setOpen(false)}
           >
@@ -50,7 +50,7 @@ export function Header() {
 
         {open ? (
           <nav
-            className="absolute inset-x-0 top-[calc(100%+0.75rem)] grid gap-1 rounded-3xl border border-black/10 bg-white/95 p-3 shadow-[0_18px_55px_rgba(0,0,0,0.14)] backdrop-blur-xl lg:hidden"
+            className="absolute inset-x-0 top-[calc(100%+0.75rem)] mx-auto grid max-w-4xl gap-1 rounded-3xl border border-black/10 bg-white/95 p-3 shadow-[0_18px_55px_rgba(0,0,0,0.14)] backdrop-blur-xl lg:hidden"
             aria-label="Menu mobile"
           >
             {navItems.map((item) => (
