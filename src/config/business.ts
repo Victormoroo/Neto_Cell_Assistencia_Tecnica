@@ -7,7 +7,8 @@ export const WHATSAPP_MESSAGE =
   "Olá, vim pelo site da Neto Cell e gostaria de solicitar um orçamento para meu celular.";
 export const ADDRESS =
   "Av. José Pimenta Sobrinho, 180 - Parque das Esmeraldas, Franca - SP, 14406-151";
-export const BUSINESS_HOURS = "09:00 às 18:00";
+export const BUSINESS_HOURS =
+  "Segunda a sexta, das 09:00 às 18:00. Sábado, das 09:00 às 15:00. Domingo fechado.";
 export const INSTAGRAM_HANDLE = "@netocell1515";
 export const INSTAGRAM_URL = "https://www.instagram.com/netocell1515";
 export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/VmY6J4nf2vdHjwdA8";

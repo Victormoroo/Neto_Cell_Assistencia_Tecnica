@@ -23,7 +23,7 @@ export function StructuredData() {
       addressCountry: "BR"
     },
     areaServed: CITY_REGION,
-    openingHours: "Mo-Sa 09:00-18:00",
+    openingHours: ["Mo-Fr 09:00-18:00", "Sa 09:00-15:00"],
     url: "https://netocell.com.br",
     sameAs: [INSTAGRAM_URL, GOOGLE_MAPS_URL],
     paymentAccepted: "Pix, cartão de débito, cartão de crédito",
