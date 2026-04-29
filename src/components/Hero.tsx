@@ -35,10 +35,10 @@ export function Hero() {
             <BadgeCheck className="h-4 w-4" aria-hidden="true" />
             Assistência técnica em {CITY_REGION}
           </p>
-          <h1 className="max-w-3xl text-4xl font-black leading-[1.04] text-brand-dark sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl text-4xl font-black leading-[1.04] text-white mix-blend-difference sm:text-5xl lg:text-6xl">
             Conserto de celular em Franca-SP com rapidez, qualidade e confiança
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
+          <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-white mix-blend-difference">
             A Neto Cell Assistência Técnica cuida do seu aparelho com diagnóstico
             claro, atendimento especializado e soluções para iPhone, Samsung,
             Motorola, Xiaomi e outras marcas.
